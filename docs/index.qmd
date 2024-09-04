@@ -1,0 +1,926 @@
+---
+title: "Interação Humano-Computador"
+author: "Thiago Pires"
+title-slide-attributes:
+  data-background-image: cover.gif
+  data-background-position: cover
+format: 
+  revealjs:
+    theme: theme.scss
+    width: 1600
+    height: 900
+    footer: "[github.com/unasp-aulas/intro-program](https://github.com/unasp-aulas/ihc)"
+    mermaid: 
+      theme: dark
+
+html-math-method: mathjax
+code-annotations: hover
+self-contained: true
+---
+
+# Conceitos de interfaces e Interação Humano-Computador
+
+## Interface
+
+\
+
+> *Uma interface é uma superfície de contato que reflete as propriedade físicas das partes que interagem, as funções a serem executadas e o balanço entre poder e controle* 
+
+\
+
+Pela definição acima, podemos considerar que uma torneira é uma interface?
+
+## Exemplo de interface
+
+\
+
+:::: columns
+::: {.column}
+A torneira é uma superfície de contato, pois literalmente encostamos nela para que ela cumpra a sua função. Girar para um lado aumenta o fluxo de água, girar para o outro vai diminuí-lo.
+:::
+::: {.column}
+<center>
+![](images/torneira.webp){width="60%"}
+</center>
+:::
+::::
+
+*Como um exercício, pense nessa definição de interface para outros objetos cotidianos que você utiliza.*
+
+## Dois componentes
+
+\
+
+A interface é composta por dois elementos: o [*agente*]{.blue} e o [*paciente*]{.blue}.
+
+- O agente é aquele que deseja que uma ação seja executada e, assim, aciona a [interface]{.blue}, que recebe a interação e responde a ela
+- No caso o paciente é a torneira que é acionada pela ação do agente
+
+*E no caso de uma torneira acionada automaticamente?*
+
+## Interfaces de computadores
+
+\
+
+Computadores possuem interfaces extremamente complexas:
+
+- Possuem diversas funções que devem ser executadas em um único objeto
+- Em uma mesma máquina, você pode [acessar sites da Internet, editar textos e imagens, jogar um jogo ou conversar com outras pessoas]{.mark}
+
+Tudo feito por meio de interfaces!
+
+::: {.fragment}
+- As interfaces buscam sempre ser [imperceptíveis]{.blue} e cada vez vez menos passivas, para que o usuário possa chegar à ação desejada da maneira mais fácil possível.
+- O ato de abrir o navegador de seu computador e visitar um site, parece algo natural e direto
+:::
+
+## O sucesso do ChatGPT e a relação com interfaces
+
+\
+
+[Entrevista com Jan Leike, pesquisador na OpenAI](https://mittechreview.com.br/a-verdadeira-historia-de-como-o-chatgpt-foi-desenvolvido-contada-pelas-pessoas-que-o-criaram/)
+
+:::: columns
+::: {.column}
+> *Jan Leike: Eu adoraria entender melhor o que está impulsionando tudo isso, o que está fazendo ele viralizar. Tipo, honestamente, não entendemos. Não sabemos.* 
+:::
+::: {.column}
+[Parte da perplexidade da equipe vem do fato de que a maior parte da tecnologia que move o ChatGPT não é nova.]{.mark} O ChatGPT é uma versão aprimorada do GPT-3.5, uma família de grandes modelos de linguagem que a OpenAI lançou alguns meses antes do chatbot. O próprio GPT-3.5 é uma versão atualizada do GPT-3, que apareceu em 2020. 
+:::
+::::
+
+::: {.fragment}
+ChatGPT foi construído com base em uma arquitetura chamada Transformers, uma arquitetura de redes neurais que foi proposta pelo Google em 2017.
+:::
+
+## O sucesso do ChatGPT e a relação com interfaces
+
+\
+
+> *Jan Leike: De certa forma, podemos entender o ChatGPT como uma versão de um sistema de IA que já temos há algum tempo. Não é um modelo essencialmente mais capaz do que o que tínhamos antes. Os mesmos modelos básicos estavam disponíveis na API há quase um ano antes do lançamento do ChatGPT. [Mas se olharmos por outro aspecto, o tornamos mais alinhado com o que os humanos querem fazer com ele. Ele fala com você em diálogo, sua interface é um bate-papo de fácil acesso, ele tenta ser útil.]{.mark} É um progresso incrível, e acho que é isso que as pessoas estão percebendo.*
+
+## Um breve histórico <br> da IHC {background-image="images/eniac.gif" background-position="450% 50%" background-size="90%"}
+
+:::: columns
+::: {.column width=40%}
+[Década de 1940:]{.blue} Durante a Segunda Guerra Mundial, os primeiros computadores eletrônicos, como o Colossus e o ENIAC, foram desenvolvidos. A interação com essas máquinas era feita principalmente por meio de painéis de controle e cartões perfurados.
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/ibm-2260.jpg" background-position="220% 50%" background-size="80%"}
+
+:::: columns
+::: {.column width=40%}
+[Década de 1960:]{.blue} Surgiram as primeiras interfaces de linha de comando, que permitiam aos usuários interagir com os computadores por meio de comandos de texto. A IBM introduziu o sistema de entrada/saída de dados chamado de "ponto de vista do terminal".
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/apple-ii.webp" background-position="100% 110%" background-size="50%"}
+
+:::: columns
+::: {.column width=40%}
+[Década de 1970:]{.blue} Com o surgimento dos primeiros computadores pessoais, como o Apple II e o IBM PC, as interfaces gráficas começaram a ganhar destaque. O Xerox PARC desenvolveu o sistema Alto, que foi pioneiro na utilização de ícones, menus e janelas.
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/macintosh.png" background-position="90% 70%" background-size="40%"}
+
+:::: columns
+::: {.column width=50%}
+[Década de 1980:]{.blue} A Apple lançou o Macintosh, popular utilizando ainda mais as interfaces gráficas. [O uso do mouse como dispositivo de entrada tornou-se comum]{.mark}, e os sistemas operacionais, como o Windows da Microsoft, adotaram amplamente esse paradigma.
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/mobilephone.jpg" background-position="100% 40%" background-size="50%"}
+
+:::: columns
+::: {.column width=40%}
+[Década de 1990 em diante:]{.blue} Com a expansão da Internet e o surgimento dos dispositivos móveis, como smartphones e tablets, as interfaces humano-computador evoluíram para se adaptar a essas novas plataformas. Surgiram interfaces baseadas em toque, gestos e sensores, proporcionando interações mais intuitivas e imersivas.
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/apple-vision.jpg" background-position="110% 90%" background-size="60%"}
+
+:::: columns
+::: {.column width=40%}
+[Atualidade:]{.blue} Hoje em dia, as interfaces humanocomputador continuam a evoluir com a incorporação de tecnologias como inteligência artificial, realidade virtual e aumentada, reconhecimento de voz e muito mais. A ênfase está na criação de interfaces que sejam acessíveis, intuitivas e que proporcionem uma experiência de usuário satisfatória.
+:::
+::::
+
+## {background-image="images/mascote-sadia.jpg" background-position="300% 60%" background-size="100%"}
+
+## Objetivo do IHC
+
+> *IHC é a disciplina preocupada com o design, avaliação e implementação de sistemas computacionais interativos para uso humano e com o estudo dos principais fenômenos ao redor deles*
+
+\
+
+Resumindo: *Produzir sistemas usáveis, seguros e funcionais*
+
+## Ergonomia e usabilidade
+
+\
+
+Para ajudar os profissionais a detalhar os processos e otimizar cada vez mais a interação, foram criados dois conceitos que abrangem o estudo dessas relações entre as pessoas e as coisas: a ergonomia e a usabilidade
+
+## Ergonomia
+
+*Ergon* *nomos*: Trabalho + regras
+
+- A ergonomia é um conjunto de normas criado para otimizar o trabalho
+- O estabelecimento da ergonomia tem grande relação com a Segunda Guerra Mundial, quando se tornou necessário pensar melhor nas características humanas para que um mesmo avião fosse facilmente pilotado por diversos pilotos.
+
+## Ergonomia
+
+\
+
+> *A ergonomia deve pensar na melhor maneira de algo se adaptar ao seu usuário, e não que o ser humano precise se adaptar a esse algo.*
+
+\
+
+- Ajustar as exigências do trabalho às possibilidades do ser humano, com o intuito de reduzir a carga externa. 
+- Conceber as máquinas, os equipamentos e as instalações pensando em maior eficácia, precisão e segurança.
+- Estudar cuidadosamente a configuração dos postos de trabalho, de forma a assegurar ao trabalhador uma postura correta.
+- Adaptar o ambiente às necessidades fisicas do ser humano.
+
+## Usabilidade
+
+\
+
+> Usabilidade é um termo que se tornou popular a partir da década de 1990 para caracterizar interfaces a partir da facilidade de uso e interação com o usuário. A primeira norma de usabilidade foi a ISO/IEC 9.126, publicada em 1991.
+
+- Eficiência: as pessoas podem realizar ações mediante uma quantidade adequada de esforço. 
+- Eficácia: o sistema realiza funções a que se destina com informações adequadas e organizadas apropriadamente. 
+- Fácil de aprender: é possivel aprender como realizar as ações e lembrar como repeti-las após algum tempo. 
+- Segurança: o sistema é seguro de operar na variedade de contextos em que será usado. 
+- Utilidade: o sistema realiza aquilo que as pessoas querem que seja feito.
+
+## Usabilidade centrado no humano
+
+\
+
+Assim como o objetivo da ergonomia é focar o humano, o mesmo ocorre com a usabilidade. Para alcançar a usabilidade adequada, o desenvolvimento de um sistema deve ser centrado no humano, já que são pessoas que vão utilizá-lo e que podem depender dele para conseguir realizar as ações que desejam. Porém, enquanto a ergonomia foca o trabalho e o conforto fisico do usuário, a usabilidade lida com interfaces e a satisfação de quem vai utilizá-las.
+
+# Diretrizes para o projeto de interação
+
+Ao estudar os conceitos de [ergonomia e usabilidade]{.mark} vemos que inúmeros fatores influenciam a interação das pessoas com as interfaces que nos cercam o tempo todo. Embora existam diversos tipos de interface, algumas premissas e conceitos são comuns a todos os projetos. Antes de tudo, vamos entender um pouco melhor o ato de projetar
+
+## O que é projetar?
+
+\
+
+> Em qual contexto você já ouviu a palavra *projeto*? Engenheiros e arquitetos fazem projetos para suas obras. Os pesquisadores precisam de um projeto de pesquisa antes de iniciarem seus estudos. Designers projetam objetos, e urbanistas projetam a cidade.
+
+\
+
+**O que há de comum?**
+
+[Todos esses profissionais lidam com problemas a serem resolvidos.]{.mark}
+
+## Projetos em IHC
+
+\
+
+Para profissionais que trabalham com IHC. *Ao idealizarem uma interface para um software*, assim como o arquiteto faz com a casa, esses profissionais, antes mesmo de escreverem uma única linha de código, [vão pensar na melhor maneira de interagir com o usuário]{.mark}, se vão utilizar menus ou botões, imagens ou texto, quais as melhores cores para cada mensagem, enfim, como deixar tudo **com a melhor usabilidade possível.**
+
+## Interface e interação
+
+\
+
+:::: columns
+::: {.column}
+Vimos que a [interface]{.blue} [é tudo aquilo que utilizamos para interagir com algo]{.mark}, a interface de um sistema computacional é formada pelos elementos que uma pessoa utiliza para interagir com um computador.
+
+\
+
+A [interação]{.blue} é, então, o conjunto formado por usuário e sistema, em que o usuário executa ações sobre o sistema, que os interpreta e os comunica em linguagem de máquina às aplicações disponíveis
+:::
+::: {.column}
+[//]: <> (
+graph RL
+ subgraph Sistema
+    INTERFACE(Interface) --> APP(Aplicação)
+    APP --> INTERFACE
+    end
+    USER(Usuário) --> |Ação| Sistema
+    Sistema --> |Interpretação| USER
+)
+<center>
+![](images/interface.png)
+</center>
+:::
+::::
+
+## Estilos de interação
+
+\
+
+> A escolha do estilo de interação é parte de um projeto de IHC, porque [define como o usuário vai utilizar o sistema]{.mark} e a complexidade de desenvolvimento que ele vai demandar.
+
+## Linguagem Natural
+
+\
+
+:::: columns
+::: {.column width="60%"}
+A linguagem natural é um estilo de interação em que se reproduz o modelo cotidiano por meio da língua. Em resumo, [é como se conversássemos com a máquina]{.mark}. A principal vantagem desse estilo é a facilidade de uso para usuários com pouco conhecimento de computadores, porque a ideia é que as máquinas entendam a fala da mesma forma que um amigo nos entende quando conversamos com ele.
+:::
+::: {.column width="40%"}
+![](images/alexa.webp)
+:::
+::::
+
+## Linguagens de comando 
+
+\
+
+Nas interfaces de linguagem de comando, [o usuário envia comandos específicos à máquina para que esta execute as ações desejadas]{.mark}. A máquina entende um conjunto de comandos predefinidos, que podem ser palavras, abreviações ou teclas de funções.
+
+\
+
+```
+mkdir -p pasta/subpasta
+```
+
+## Menus
+
+\
+
+:::: columns
+::: {.column}
+Menus são conjuntos de opções apresentadas ao usuário, [em que cada opção representa uma ação diferente.]{.mark} Ainda hoje muito populares nos computadores desktop, e mesmo na Internet, a vantagem é que neles os comandos são autoexplicativos
+:::
+::: {.column}
+<center>
+![](images/menu.png){width="60%"}
+</center>
+:::
+::::
+
+## Manipulação direta
+
+\
+
+:::: columns
+::: {.column width="40%"}
+Por manipulação direta entendemos as interfaces que tentam imitar os movimentos do usuário. [A interação mais comum que fazemos por manipulação direta é o ato de clicar e arrastar com o mouse.]{.mark} O que vemos na tela é uma analogia do nosso movimento com o mouse.
+:::
+::: {.column width="60%"}
+<center>
+![Atualmente, novas ações de manipulação direta são desenvolvidas a partir dos dispositivos touch, como os smartphones e os  tablets. ato de arrastar se tornou mais "direto" ainda, já que, quando arrastamos, ao encostar em uma tela, temos maior impressão de estarmos manipulando o elemento virtual.](images/minority.gif){width="100%"}
+</center>
+:::
+::::
+
+## WIMP
+
+\
+
+:::: columns
+::: {.column}
+WIMP é a sigla para *windows, icons, menus e pointers*, que são as palavras em inglês para janelas, ícones, menus e apontadores. [Os WIMP compõem a característica mais básica dos sistemas operacionais modernos e de todos os *Graphical User Interface* (GUI) desenvolvidos até hoje.]{.mark} Como podemos ver, o WIMP é formado por quatro estilos diferentes. Mesmo assim, podemos encontrar outros estilos, como manipulação direta e preenchimento de formulários.
+:::
+::: {.column}
+<center>
+![Sua principal vantagem é a flexibilidade e a variedade de saídas para o usuário. Por exemplo: você pode copiar um texto a partir do ícone de copiar, pelo menu `Editar > Copiar`, ou ainda com  o comando `Ctrl + C` do teclado.](images/wimp.gif)
+</center>
+:::
+::::
+
+## Comparativo
+
+\
+
+<center>
+![](images/comparativo.png){width="50%"}
+</center>
+
+## Projeto de interação
+
+\
+
+Agora que você sabe o que é interação e seus diferentes estilos, deve se perguntar: como decidir qual a melhor solução para o  usuário? Chegou a hora de iniciar um projeto de interação.
+
+\
+
+> "O projeto de interação é uma atividade prática e criativa que tem por objetivo final o desenvolvimento de um produto que ajude os usuários a atingirem suas metas". [Portanto, é sempre preciso ter em mente que o objetivo do projeto de interação é tornar mais simples a vida do seu usuário.]{.mark}
+
+## Processos do projeto de interação
+
+\
+
+:::: columns
+::: {.column}
+Não existe um único modelo para criar um projeto de interação. No entanto, como ele envolve dezenas de processos, uma vez que a interação é um fenômeno complexo e que envolve muitas ações do usuário, [é importante que tudo seja muito detalhado e descrito]{.mark}
+:::
+::: {.column}
+![Essa descrição rica em detalhes leva ao desenvolvimento de [*wireframes*]{.blue}, modelos e outros tipos de protótipos que levam a testes mais precisos e que reduzem o tempo do desenvolvimento.](images/detalhe-atividade.png)
+:::
+::::
+
+## Atividades do projeto de interação
+
+\
+
+Desde a identificação do problema até o início do desenvolvimento, um projeto de IHC passa por diversas fases.
+
+\
+
+1. Identificar necessidades e estabelcer requisitos
+2. Desenvolver projetos alternativos
+3. Construir versões interativas
+4. Avaliar o projeto
+
+## Identificar necessidades e estabelcer requisitos
+
+\
+
+- Devemos conhecer quem são nossos usuários-alvo 
+- De que forma o produto interativo poderia ser útil.
+
+\
+
+Essas necessidades constituem as bases dos requisitos do produto e sustentam o projeto e o seu desenvolvimento. Essa atividade é fundamental para uma abordagem centrada no usuário
+
+## Desenvolver projetos alternativos
+
+\
+
+:::: columns
+::: {.column width="60%"}
+Atividade central do projeto de interação:
+
+- [Projeto conceitual:]{.blue} envolve produzir o modelo conceitual para o produto. Um modelo conceitual descreve que produto deve fazer, como se comportar e com o que parecer.
+- [Projeto fisico:]{.blue} considera detalhes como cores, sons, imagens, menus e ícones. As alternativas são consideradas em cada ponto.
+:::
+::: {.column width="40%"}
+![](images/conceito.png){width="100%"}
+:::
+::::
+
+## Construir versões interativas
+
+\
+
+:::: columns
+::: {.column width="60%"}
+[A maneira mais sensata de os usuários avaliarem os projetos é interagir com eles]{.mark}, que  requer uma versão interativa dos projetos a serem construídos, embora isso **não signifique que seja necessária uma versão em software.**
+
+\
+
+*Por meio da simulação, os usuários poderão ter uma noção real de como será interagir com o produto.*
+:::
+::: {.column width="40%"}
+<center>
+![](images/interativo.gif){width="60%"}
+</center>
+:::
+::::
+
+## Avaliar o projeto
+
+\
+
+:::: columns
+::: {.column width="60%"}
+[Diz respeito ao processo de determinar a usabilidade e a aceitabilidade do projeto. É medido por meio de vários critérios,]{.mark} incluindo o número de erros que os usuários cometem, se o projeto e o produto são atraentes, se preenchem os requisitos, e assim por diante. O projeto de interação exige um alto nível de participação do usuário
+:::
+::: {.column width="40%"}
+<center>
+![](images/crash-test.gif){width="100%"}
+</center>
+
+:::
+::::
+
+## Técnicas de elicitação de requisitos
+
+\
+
+> *Trata-se de obter dados que possam contribuir com projeto, ou seja, [levantar as necessidades e entender o problema proposto]{.mark}, que é exatamente o primeiro passo que indicamos no item anterior.*
+
+<center>
+![*Me ajuda a te ajudar* -- Frase do filme Jerry Maguire](images/help-me.gif){width="40%"}
+</center>
+
+## Entrevistas
+
+\
+
+:::: columns
+::: {.column width="60%"}
+> *As entrevistas são um método bastante popular no levantamento de dados. [A partir de conversas com potenciais usuários]{.mark}, pode-se entender melhor como as pessoas vão interagir com o sistema a ser desenvolvido*. As entrevistas podem ser de três tipos: 
+:::
+::: {.column width="40%"}
+<center>
+![](images/entrevista.webp){width="110%"}
+</center>
+:::
+::::
+
+1. Estruturadas: seguem uma estrutura rigida e sequencial, [com pouco espaço para comentários]{.mark}. 
+2. Semiestruturadas: seguem uma estrutura básica, mas [permitem questões ou observações extras]{.mark} a partir do usuário. 
+3. Não estruturadas: [seguem de acordo com a motivação do entrevistado]{.mark}
+
+## Brainstorming
+
+\
+
+:::: columns
+::: {.column}
+> *[Trata-se de reuniões para gerar ideias a partir da discussão coletiva]{.mark}. Pode envolver especialistas, usuários e outros profissionais relevantes ao projeto. Essa técnica pode ser vantajosa no início de um projeto em que pouco se sabe sobre suas necessidades ou ideias para soluções são escassas.*
+:::
+::: {.column}
+<center>
+![](images/brainstorm.webp){width="90%"}
+</center>
+
+:::
+::::
+
+## Prototipação
+
+\
+
+:::: columns
+::: {.column width="60%"}
+> [Prototipação]{.blue} consiste em criar um [modelo similar ao definido no projeto]{.mark} ou desenvolver parte do projeto para teste com usuários; é utilizada em momentos de incerteza quanto aos requisitos ou para obter um retorno inicial dos usuários.
+:::
+::: {.column width="40%"}
+<center>
+![](images/prototype.gif){width="75%"}
+</center>
+:::
+::::
+
+
+# Usabilidade na prática
+
+## ISO 9126
+
+\
+
+- A [ISO]{.blue} tem como objetivo criar normas que facilitem o comércio e promovam boas práticas de gestão e o avanço tecnológico, além de disseminar conhecimentos.
+- A expressão [ISO 9001]{.blue} designa um grupo de normas técnicas que estabelecem um modelo de gestão da qualidade para organizações em geral, qualquer que seja o seu tipo ou dimensão.
+- A [ISO 9126]{.blue} descreve um modelo de qualidade do produto de software
+
+## ISO 9126 e a usabilidade
+
+\
+
+:::: columns
+::: {.column width="30%"}
+::: {.fragment .semi-fade-out fragment-index=2}
+- Funcionalidade
+:::
+::: {.fragment .semi-fade-out fragment-index=2}
+- Confiabilidade
+:::
+::: {.fragment .grow fragment-index=2}
+- Usabilidade
+:::
+::: {.fragment .semi-fade-out fragment-index=2}
+- Eficiência
+:::
+::: {.fragment .semi-fade-out fragment-index=2}
+- Manutebilidade
+:::
+::: {.fragment .semi-fade-out fragment-index=2}
+- Portabilidade
+:::
+:::
+::: {.column .fragment fragment-index=2 width="70%"}
+- **Inteligibilidade**[: atributos do software que evidenciam o esforço do usuário para [reconhecer os conceitos lógicos de uma interface]{.mark}]{.fragment}
+- **Apreensibilidade**[: atributos do software que evidenciam o esforço do usuário para [aprender as funcionalidades do sistema]{.mark}]{.fragment}
+- **Operacionalidade**[: atributo do software que evidencia o esforço do usuário para [operá-lo]{.mark}]{.fragment}
+- **Atratividade**[: a [satisfação subjetiva]{.mark} do usuário durante o uso]{.fragment}
+- **Conformidade**[: atributos do software que fazem com que [esteja de acordo com as normas]{.mark}]{.fragment}
+:::
+::::
+
+## A usabilidade por Nielsen
+
+1. Visibilidade e status do sistema
+2. Compatibilidade do sistema com o mundo real
+3. Controle do usuário e liberdade
+4. Consistência e padrões
+5. Ajudar os usuários a reconhecer, diagnosticar e recuperar-se de erros
+6. Prevenção de erros
+7. Reconhecimento em vez de memorização
+8. Flexibilidade e eficiência no uso
+9. Estética e design minimalista
+10. Ajuda e documentação
+
+## Visibilidade e status do sistema
+
+\
+
+:::: columns
+::: {.column}
+O sistema mantém os usuários sempre informados sobre ○ que está acontecendo, fornecendo um feedback adequado, dentro de um tempo razoável.
+:::
+::: {.column}
+![Quando estamos assistindo/ouvindo uma playlist do Youtube, do lado direito fica bem claro: qual vídeo estamos assistindo; qual é próximo; quais assistimos ou não.](images/playlist.png)
+:::
+::::
+
+## Compatibilidade do sistema com o mundo real
+
+\
+
+:::: columns
+::: {.column}
+O sistema se comunica pela linguagem do usuário, [utilizando palavras, frases e conceitos que lhe são familiares]{.mark}, em vez de  termos orientados ao sistema.
+
+\
+
+*É aplicada esta estratégia ao utilizar setas, ícones e a cor vermelha para destacar elementos negativos.*
+:::
+::: {.column}
+![Um software que usa essa abordagem é o Photoshop em sua barra de ferramentas.](images/photoshop.webp){width="15%"}
+:::
+::::
+
+## Controle do usuário e liberdade
+
+\
+
+:::: columns
+::: {.column}
+Fornecer maneiras de permitir que os usuários saiam facilmente de lugares  inesperados, utilizando "saídas de emergência" claramente identificadas
+:::
+::: {.column}
+![Por exemplo quando criamos um tweet é bacana poder deletá-lo se estivermos afim. Mas não dá pra editar um tweet após 30 min.](images/twitter.png){width="80%"}
+:::
+::::
+
+## Ajudar os usuários a reconhecer, diagnosticar e recuperar-se de erros
+
+\
+
+:::: columns
+::: {.column}
+As mensagens de erros tem que ser claras e próximas do conteúdo ou ação que causou o erro.
+:::
+::: {.column}
+![No formulário de cadastro do Spotify caso você não preencha os dados necessários ele deixa bem claro quais campos estão faltando, com um mensagem clara e objetiva.](images/spotify.png){width="50%"}
+:::
+::::
+
+
+## Consistência e padrões
+
+\
+
+:::: columns
+::: {.column}
+Evitar fazer com que o usuário tenha que pensar se palavras, situações ou ações diferentes [significam a mesma coisa]{.mark}
+:::
+::: {.column}
+![O botão de anterior, *play* e próximo sempre apresentam o mesmo padrão em todos os vídeos do Youtube](images/play.png){width="80%"}
+:::
+::::
+
+## Prevenção de erros
+
+\
+
+:::: columns
+::: {.column}
+Não é uma boa ideia deixar seu usuário errar sem explicar previamente o motivo do erro. Melhor do que isso, tente criar um interface que permite o usuário não errar.
+:::
+::: {.column}
+![A busca do Google faz isso de uma forma muito inteligente. No momento que começamos escrever nossa busca ele já te entrega algumas sugestões, [mesmo se a gente escrever a busca com uma ortografia errada ele realiza a busca]{.mark} e pergunta se estamos procurando outra informação com a ortografia correta.](images/google-search.webp)
+:::
+::::
+
+## Reconhecimento em vez de memorização
+
+\
+
+:::: columns
+::: {.column}
+O usuário não tem obrigação de decorar qual foi o caminho que ele fez pra chegar até a página.
+:::
+::: {.column}
+![Por exemplo, quando você entra em um produto do [site da IBM](https://www.ibm.com/br-pt/products/cloudant) é disponibilizado o caminho que você fez pra chegar até ele. Nós chamamos isso de *breadcrumb*.](images/ibm.png)
+:::
+::::
+
+## Flexibilidade e eficiência no uso
+
+\
+
+:::: columns
+::: {.column}
+Fornecer aceleradores invisíveis ao usuário inexperiente, ao mesmo tempo que  proporciona aos mais experientes mais rapidez na realização de tarefas.
+:::
+::: {.column}
+![Por exemplo, no Excel, quando você está focado em uma planilha, pode usar o mouse para navegar para outras células, e também vários atalhos de teclado.](images/excel.png)
+:::
+::::
+
+## Estética e design minimalista
+
+\
+
+:::: columns
+::: {.column}
+Por favor não encha linguiça. Toda informação extra que você deixar pro seu usuário pode na verdade adicionar mais uma dúvida, ou seja, deixe o seu layout e o conteúdo o mais simples e direto possível.
+:::
+::: {.column}
+<center>
+![](images/minimalist.png)
+</center>
+:::
+::::
+
+## Ajuda e documentação
+
+\
+
+:::: columns
+::: {.column}
+É uma boa não precisar dessa heurística. Implementar documentação e sistema de ajuda sempre é chato e muitos usuários têm o costume de ignorar ambos mas, se for realmente necessário, deixe a documentação próxima do usuário e do elemento ou ação que tenha necessidade de uma explicação mais detalhada.
+:::
+::: {.column}
+<center>
+![Por exemplo, no Google Pay tem um campo pra preencher o código de segurança do cartão. Como não é algo muito óbvio, tem uma imagem próxima ao campo mostrando onde fica o código de segurança do cartão.](images/card.png)
+</center>
+:::
+::::
+
+# Modelos e paradigmas de design
+
+## Contexto
+
+\
+
+:::: columns
+::: {.column}
+<center>
+![](images/processador-humano.png){width="90%"}
+</center>
+:::
+::: {.column}
+- Memória de trabalho ou de curta duração
+- Memória de curta duração também guardam as saídas do sistema sensorial
+- O processador cognitivo irá trabalhar com a informação que foi codificada na memória de curta duração de [forma simbólica]{.blue}
+- [Forma simbólica]{.blue} = atribuiu significado
+- Um exemplo de memória de curta duração é quando você pede a um garçom um refrigerante. [Ele armazena aquela informação até levar a bebida a você, depois aquilo é descartado]{.mark}
+:::
+::::
+
+## Sistema Cognitivo
+
+\
+
+> O sistema cognitivo humano cria modelos mentais ou representações da informação recebida para interpretar as informações de [forma simbólica]{.blue} (*com os significados que foram atribuidos*)
+
+\
+
+[Modelos mentais]{.blue} são as imagens que as pessoas têm dos objetos com os quais interagem, de si próprias, dos outros, do ambiente
+
+## Modelos mentais
+
+\
+
+> Pessoas [formam modelos mentais por meio de experiência, treinamento e instrução]{.mark} usando representações com base na estrutura do seu raciocínio e no tratamento da informação.
+
+\
+
+Estudos e teorias cognitivas descrevem dois tipos básicos de modelos mentais: Modelo mental estrutural e Modelo mental funcional
+
+## Modelo mental estrutural
+
+\
+
+> Esse modelo demonstra que o usuário internalizou em sua memória a estrutura de como um sistema funciona
+
+\
+
+:::: columns
+::: {.column}
+Modelo usado para descrever a mecânica interna da máquina ou o sistema com seus componentes. Atua como substituto do objeto real.
+:::
+::: {.column}
+![Quando você dirige um carro, com o tempo você já internalizou como um carro funciona](images/driver.webp){width="50%"}
+:::
+::::
+
+## Modelo mental funcional
+
+\
+
+> Usa conhecimento armazenado para o usuário recuperar a informação de como um sistema funciona (modelo mental estrutural) e criar um modelo de como fazer para interagir
+
+\
+
+- Projetistas e usuários se diferenciam em extensão, níveis de detalhes e natureza ([modelo conceitual]{.blue})
+- Usuários iniciantes e avançados se diferenciam em nível de detalhamento
+- Tipos diferentes de usuários (e.g. operação e gestão) se diferenciam em termos de tarefas (modelo conceitual)
+
+## Modelo conceitual
+
+\
+
+> É uma coleção de associações na mente do usuário ou do desenvolvedor, que serão [utilizadas para facilitar o entendimento no desenvolvimento e na utilização]{.mark} de interfaces interativa
+
+\
+
+Como fazer? *Colocar conceitos de cada um no papel para estabelecer funções e conexões*
+
+## Modelo conceitual de um *bookmark* (favoritos)
+
+\
+
+<center>
+![Fonte https://www.usabilidoido.com.br/mapeando_modelos_conceituais.html](images/delicious_mapa_mental.gif){width="70%"}
+</center>
+
+## Diferentes modelos mentais
+
+\
+
+- O modelo do designer/projeto é um modelo mental do designer
+- O modelo do usuário é um modelo mental que constitui como o usuário entende e explica a opeção do sistema
+- A [imagem do sistema é um [modelo conceitual]{.blue}]{.mark}
+
+\
+
+*O que se espera é que a imagem do sistema construído seja bastante parecido com o modelo conceitual que o usuário tinha em mente*
+
+## Metáfora
+
+\
+
+> Metáfora é uma figura de linguagem, [utilizada para melhorar a expressividade]{.mark} de uma informação
+
+\
+
+:::: columns
+::: {.column}
+[Hipótese:]{.blue} pode [ajudar na formulação de um modelo conceitual]{.mark} consistente para interação
+:::
+::: {.column}
+[Objetivo:]{.blue} oferecer aos usuários um [esquema de funcionamento]{.mark} de interface que facilite o entendimento e previna erros
+:::
+::::
+
+## Paradigmas (padrões) de design de interação
+
+\
+
+> São propostas de design de interação, as quais são implementadas para a construção de sistemas interativos
+
+\
+
+- Diferentes estilos de interação são beseados em diferentes paradigmas
+- Se é um padrão já consolidado é mais fácil do usuário ter facilidade para utilizar
+- Exemplos: metáforas, manipualação direta, interfaces baseadas em agente, computação pervasiva/computação ubíqua
+
+## Paradigmas (padrões), estilos e metáforas (exemplos)
+
+\
+
+### Área de trabalho (*desktop*)
+
+\
+
+:::: columns
+::: {.column}
+<center>
+![](images/desktop.jpg){width="70%"}
+</center>
+
+:::
+
+::: {.column}
+<center>
+![](images/gui.webp){width="70%"}
+</center>
+
+:::
+::::
+
+## Paradigmas, estilos e metáforas (Exemplos)
+
+\
+
+### Manipulação direta
+
+\
+
+:::: columns
+::: {.column}
+<center>
+![](images/estilingue.jpeg){width="70%"}
+</center>
+
+:::
+
+::: {.column}
+<center>
+![](images/angry-bird.png){width="70%"}
+</center>
+
+:::
+::::
+
+
+
+## Paradigmas, estilos e metáforas (exemplos)
+
+\
+
+### Estante de livros
+
+\
+
+:::: columns
+::: {.column}
+<center>
+![](images/online-bookshelf.png){width="60%"}
+</center>
+
+:::
+
+::: {.column}
+<center>
+![](images/estante.webp){width="60%"}
+</center>
+
+:::
+::::
+
+## Paradigmas, estilos e metáforas (exemplos)
+
+\
+
+### Carrinho de compras
+
+\
+
+:::: columns
+::: {.column}
+<center>
+![](images/carrinho-online.png){width="60%"}
+</center>
+
+:::
+
+::: {.column}
+<center>
+![](images/carrinho-compras.jpg){width="60%"}
+</center>
+
+:::
+::::
+
+
+## Cuidados com a metafora
+
+\
+
+- Levar a metáfora ao pé da letra
+- Levar a caminhos errados
