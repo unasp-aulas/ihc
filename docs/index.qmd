@@ -9,7 +9,7 @@ format:
     theme: theme.scss
     width: 1600
     height: 900
-    footer: "[github.com/unasp-aulas/intro-program](https://github.com/unasp-aulas/ihc)"
+    footer: "[github.com/unasp-aulas/intro-ihc](https://github.com/unasp-aulas/ihc)"
     mermaid: 
       theme: dark
 
@@ -924,3 +924,143 @@ Como fazer? *Colocar conceitos de cada um no papel para estabelecer funções e 
 
 - Levar a metáfora ao pé da letra
 - Levar a caminhos errados
+
+# Acessibilidade
+
+## Durante a interação
+
+\
+
+Um usuário emprega:
+
+- Habilidade motora
+- Seus sentidos e percepção
+- Capacidade cognitiva, de interpretação e raciocínio
+
+\
+
+*Se houver [barreira]{.blue} na interface, um ou vários elementos podem ficar comprometidos.*
+
+## Acessibilidade
+
+\
+
+> "É a possibilidade e condição de alcance para utilização com segurança e autonomia, de espaços, mobiliários equipamentos urbanos, edificações, transportes informação e comunicação, inclusive seus sistemas e tecnologias, bem como de outros serviços e instalações abertos ao público, de uso público ou privados de uso coletivo, tanto na zona urbana como na rural, por pessoa com deficiência ou com mobilidade reduzida" ^[LEI Nº 13.146, DE 6 DE JULHO DE 2015 <https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13146.htm>]
+
+## Barreiras para acessibilidade
+
+\
+
+> Barreiras: qualquer entrave, obstáculo, atitude ou comportamento que limite ou impeça a participação social da pessoa, bem como o gozo, a fruição e o exercício de seus direitos à acessibilidade, à liberdade de movimento e de expressão, à comunicação, ao acesso à informação, à compreensão, à circulação com segurança ^[LEI Nº 13.146, DE 6 DE JULHO DE 2015 <https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Lei/L13146.htm>]
+
+\
+
+*Barreiras tecnológicas: as que dificultam ou impedem o acesso da pessoa com deficiência às tecnologias;*
+
+## Objetivo em IHC
+
+\
+
+Oferecer [meios]{.blue} para que o usuário acesse o sistema e interaja com ele, [sem que a interface imponha obstáculos.]{.mark}
+
+\
+
+### Exemplo
+
+A tag `aria-label` torna o componente acessível para deficiêntes visuais
+
+```html
+<cds-header aria-label="IBM Platform Name">
+  <cds-header-menu-button
+    button-label-active="Close menu"
+    button-label-inactive="Open menu"></cds-header-menu-button>
+  <cds-header-name href="javascript:void 0" prefix="IBM"
+    >[Platform]</cds-header-name
+  >
+```
+
+## Avaliação de acessibilidade
+
+\
+
+Métodos de validação (automatizada ou humana):
+- Avaliam o nível de acessibilidade de sites e/ou aplicativos
+- Geram uma lista dos problemas encontrados e que devem e que devem ser corrigidos
+
+\
+
+Empresas como Apple e Google possuem [princípios]{.blue} de desenvolvimento de interfaces de usuário e seguem [diretrizes]{.blue}
+
+## Avaliação de acessibilidade
+
+\
+
+O W3C desenvolveu as Diretrizes de Acessibilidade para o Conteúdo da Web (WCAG): <https://www.w3.org/TR/2023/REC-WCAG22-20231005/>
+
+\
+
+W3C (World Wide Web Consortium) hospeda a WAI (Web Accessibility Initiative) que:
+
+- Patrocinada por governos, indústrias, centros de pesquisa em acessibilidade, escolas e universidades, etc
+- Tem desenvolvimento de soluções para acessibilidade em consenso com W3C
+
+## WCAG
+
+\
+
+Pretende auxiliar com recomendações que tornem o conteúdo mais acessível as pessoas com deficiências visuais, auditivas, motoras, fonológicas, intelectuais etc \
+
+- São organizados em princípios, diretrizes, critérios de sucesso e técnicas 
+- Exemplos de diretrizes 
+  - 1.1 Textos Alternativos, 
+  - 1.3 Adaptabilidade, 
+  - 2.1 Teclado Acessível 
+- Tem níveis de conformidade (grau de sucesso A, AA e AAA) \
+- Tem técnicas para atender aos critérios de sucesso
+
+::: aside
+WCAG versão 2.2 <https://www.w3.org/TR/2023/REC-WCAG22-20231005/> \
+Versão 2.1 em portugês <https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/>
+:::
+
+## Avaliação de acessibilidade
+
+\
+
+A realização de análise de acessibilidade, a fim de  desenvolver sistemas interativos acessíveis pode exigir:  
+
+- Uma vasta leitura de documentos extensos
+- Que hajam especialistas que conheçam tais diretrizes \
+
+Ferramentas que automatizam a avaliação: 
+
+- Access Monitor  
+- Scanner de Acessibilidade da Google
+- <https://www.w3.org/WAI/test-evaluate/tools/list/>
+
+## Avaliação de acessibilidade
+
+\
+
+- [Access Monitor]{.blue} valida a acessibilidade de uma [página web]{.blue} utilizando as WCAG mais recente
+- [Scanner da Google]{.blue} possui o intuito de conceder sugestões de melhorias de acessibilidade para [aplicações móveis]{.blue}
+- Scanner da Google aborda os seguintes componentes:  
+  - Rótulos de conteúdo  
+  - Tamanho da área de toque
+  - Itens clicáveis
+  - Contraste de texto e imagem
+
+## Avaliação de acessibilidade
+
+\
+
+- O scanner [possui a limitação de não abranger características suficientes para atender uma grande parcela do público]{.mark} com  necessidades especiais
+- Os componentes do scanner parecem ser mais voltados à [melhoria de acessibilidade para pessoas com deficiências visuais ou motoras]{.mark}
+
+## Acessibilidade
+
+\
+
+> "O poder da Web está na sua universalidade. Acesso  para todos, independente de deficiência é um aspecto  essencial." \
+
+Tim Berners-Lee, W3C Director and  inventor of the World Wide Web
