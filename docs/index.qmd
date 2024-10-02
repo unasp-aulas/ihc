@@ -984,6 +984,7 @@ A tag `aria-label` torna o componente acessível para deficiêntes visuais
 \
 
 Métodos de validação (automatizada ou humana):
+
 - Avaliam o nível de acessibilidade de sites e/ou aplicativos
 - Geram uma lista dos problemas encontrados e que devem e que devem ser corrigidos
 
@@ -1020,7 +1021,7 @@ Pretende auxiliar com recomendações que tornem o conteúdo mais acessível as 
 
 ::: aside
 WCAG versão 2.2 <https://www.w3.org/TR/2023/REC-WCAG22-20231005/> \
-Versão 2.1 em portugês <https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/>
+Versão 2.1 em português <https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/>
 :::
 
 ## Avaliação de acessibilidade
