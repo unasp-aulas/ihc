@@ -107,6 +107,17 @@ ChatGPT foi construído com base em uma arquitetura chamada Transformers, uma ar
 :::
 ::::
 
+## ENIAC {background-image="images/eniac-today.gif" background-position="450% 50%" background-size="90%"}
+
+:::: columns
+::: {.column width=40%}
+- Tamanho e peso: Ocupando uma sala inteira e pesando 30 toneladas. 
+- Capacidade de processamento: Embora enorme, sua capacidade de processamento era inferior à de calculadoras modernas, capaz de realizar cerca de 5.000 adições por segundo. 
+- Programação: O sistema operacional era operado por um grupo de funcionárias do exército, consideradas as primeiras programadoras. 
+:::
+::::
+
+
 ## Um breve histórico <br> da IHC {background-image="images/ibm-2260.jpg" background-position="220% 50%" background-size="80%"}
 
 :::: columns
@@ -115,11 +126,19 @@ ChatGPT foi construído com base em uma arquitetura chamada Transformers, uma ar
 :::
 ::::
 
-## Um breve histórico <br> da IHC {background-image="images/apple-ii.webp" background-position="100% 110%" background-size="50%"}
+## Um breve histórico <br> da IHC {background-image="images/alto.png" background-position="100% 80%" background-size="45%"}
 
 :::: columns
 ::: {.column width=40%}
 [Década de 1970:]{.blue} Com o surgimento dos primeiros computadores pessoais, como o Apple II e o IBM PC, as interfaces gráficas começaram a ganhar destaque. O Xerox PARC desenvolveu o sistema Alto, que foi pioneiro na utilização de ícones, menus e janelas.
+:::
+::::
+
+## Um breve histórico <br> da IHC {background-image="images/apple-ii.webp" background-position="100% 110%" background-size="50%"}
+
+:::: columns
+::: {.column width=40%}
+Em 1979, Steve Jobs, cofundador da Apple, visitou o Xerox PARC e viu pela primeira vez a interface gráfica e o mouse. Ele percebeu o enorme potencial da tecnologia e rapidamente decidiu implementá-la nos produtos da Apple.
 :::
 ::::
 
@@ -169,6 +188,19 @@ Para ajudar os profissionais a detalhar os processos e otimizar cada vez mais a 
 
 - A ergonomia é um conjunto de normas criado para otimizar o trabalho
 - O estabelecimento da ergonomia tem grande relação com a Segunda Guerra Mundial, quando se tornou necessário pensar melhor nas características humanas para que um mesmo avião fosse facilmente pilotado por diversos pilotos.
+
+## Ergonomia
+
+\
+
+> "As máquinas eram construídas com pouca ou nenhuma consideração pelos indivíduos que iriam trabalhar com elas... Em anos recentes, porém, a situação mudou muito rapidamente; as máquinas tornaram-se cada vez mais sofisticadas e as pessoas que trabalham com elas passaram a atuar cada vez menos como executores, e cada vez mais como controladores. E isto, por sua vez, transferiu a ênfase do aspecto físico do trabalho humano para o aspecto mental". -- Mureel (1978)
+
+## Ergonomia
+
+\
+
+- [Ergonomia Física]{.blue}: referente às características humanas anatômicas, antropométricas, fisiológicas e biomecânicas, e como estas se relacionam com a atividade física. Tópicos importantes incluem posturas de trabalho, levantamento de material, movimentos repetitivos, distúrbios musculoesquelético relacionados ao trabalho, layout do local de trabalho, segurança e saúde.
+- [Ergonomia Cognitiva]{.blue}: referente aos processos mentais: percepção, memória, raciocínio e respostas motoras. Estuda também como esses processos afetam as interações entre pessoas e outros elementos do sistema. Tópicos relevantes são a carga de trabalho mental, tomada de decisão, interação homem-computador, estresse e treinamento de trabalho da maneira que possam se relacionar com o projeto humanosistema.
 
 ## Ergonomia
 
