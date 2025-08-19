@@ -221,17 +221,17 @@ Para ajudar os profissionais a detalhar os processos e otimizar cada vez mais a 
 
 > Usabilidade é um termo que se tornou popular a partir da década de 1990 para caracterizar interfaces a partir da facilidade de uso e interação com o usuário. A primeira norma de usabilidade foi a ISO/IEC 9.126, publicada em 1991.
 
-- Eficiência: as pessoas podem realizar ações mediante uma quantidade adequada de esforço. 
-- Eficácia: o sistema realiza funções a que se destina com informações adequadas e organizadas apropriadamente. 
-- Fácil de aprender: é possivel aprender como realizar as ações e lembrar como repeti-las após algum tempo. 
-- Segurança: o sistema é seguro de operar na variedade de contextos em que será usado. 
-- Utilidade: o sistema realiza aquilo que as pessoas querem que seja feito.
+- [Eficiência:]{.blue} as pessoas podem realizar ações mediante uma quantidade adequada de esforço. 
+- [Eficácia:]{.blue} o sistema realiza funções a que se destina com informações adequadas e organizadas apropriadamente. 
+- [Fácil de aprender:]{.blue} é possivel aprender como realizar as ações e lembrar como repeti-las após algum tempo. 
+- [Segurança:]{.blue} o sistema é seguro de operar na variedade de contextos em que será usado. 
+- [Utilidade:]{.blue} o sistema realiza aquilo que as pessoas querem que seja feito.
 
 ## Usabilidade centrado no humano
 
 \
 
-Assim como o objetivo da ergonomia é focar o humano, o mesmo ocorre com a usabilidade. Para alcançar a usabilidade adequada, o desenvolvimento de um sistema deve ser centrado no humano, já que são pessoas que vão utilizá-lo e que podem depender dele para conseguir realizar as ações que desejam. Porém, enquanto a ergonomia foca o trabalho e o conforto fisico do usuário, a usabilidade lida com interfaces e a satisfação de quem vai utilizá-las.
+*Assim como o objetivo da ergonomia é focar o humano, o mesmo ocorre com a [usabilidade]{.blue}.* Para alcançar a usabilidade adequada, o desenvolvimento de um sistema deve ser [centrado no humano]{.mark}, já que são pessoas que vão utilizá-lo e que podem depender dele para conseguir realizar as ações que desejam. [Porém, enquanto a ergonomia foca o trabalho e o conforto fisico/mental do usuário, a usabilidade lida com interfaces e a satisfação de quem vai utilizá-las.]{.mark}
 
 # Diretrizes para o projeto de interação
 
@@ -569,6 +569,13 @@ Atividade central do projeto de interação:
 - **Conformidade**[: atributos do software que fazem com que [esteja de acordo com as normas]{.mark}]{.fragment}
 :::
 ::::
+
+## Definição de usabilidade
+
+\
+
+> *O grau em que um produto é usado por usuários específicos para atingir objetivos específicos
+com eficácia, eficiência e satisfação em um contexto de uso específico.*
 
 ## A usabilidade por Nielsen
 
