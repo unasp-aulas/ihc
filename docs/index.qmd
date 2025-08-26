@@ -386,7 +386,11 @@ Agora que você sabe o que é interação e seus diferentes estilos, deve se per
 Não existe um único modelo para criar um projeto de interação. No entanto, como ele envolve dezenas de processos, uma vez que a interação é um fenômeno complexo e que envolve muitas ações do usuário, [é importante que tudo seja muito detalhado e descrito]{.mark}
 :::
 ::: {.column}
+<center>
 ![Essa descrição rica em detalhes leva ao desenvolvimento de [*wireframes*]{.blue}, modelos e outros tipos de protótipos que levam a testes mais precisos e que reduzem o tempo do desenvolvimento.](images/detalhe-atividade.png)
+
+![Wireframe de baixa fidelidade](images/wireframe.png){width=60%}
+</center>
 :::
 ::::
 
@@ -429,6 +433,15 @@ Atividade central do projeto de interação:
 ![](images/conceito.png){width="100%"}
 :::
 ::::
+
+## Desenvolver projetos alternativos
+
+### Projeto conceitual ^[<https://irlabr.wordpress.com/apostila-de-ihc/modelos-conceituais/>]
+A  Xerox nos anos 70 foi a percussora da interface gráfica e da conhecida GUIs (Graphical User Interface). Esta nova forma de manipular a informação é a definição de um novo modelo conceitual
+
+- [Metáfora:]{.blue} referência de uma mesa de trabalho e seus elementos relacionados, como documentos, pastas e lixeiras;
+- [WYSIWYG (what you see is what you get):]{.blue} os usuários manipulam objetos diretamente na interface a exemplo dos documentos e  pastas.
+- [Consistência de comandos:]{.blue} os conceitos de ações aplicados ao sistema e aos objetos são preservados e as semelhanças de execução entre comandos é mantida sempre que possível (copiar, selecionar, colar, mover ou excluir possuem sempre a mesma forma de realização da tarefa).
 
 ## Construir versões interativas
 
@@ -525,6 +538,13 @@ Atividade central do projeto de interação:
 :::
 ::::
 
+## Diferenças entre wireframe, mockup e prototipagem
+
+\
+
+<center>
+![](images/wire-mock-proto.png){width=80%}
+</center>
 
 # Usabilidade na prática
 
