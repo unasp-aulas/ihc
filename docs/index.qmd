@@ -784,11 +784,30 @@ Por favor não encha linguiça. Toda informação extra que você deixar pro seu
 
 \
 
-> Pessoas [formam modelos mentais por meio de experiência, treinamento e instrução]{.mark} usando representações com base na estrutura do seu raciocínio e no tratamento da informação.
+::: columns
+::: {.column}
+
+Pessoas [formam modelos mentais por meio de experiência, treinamento e instrução]{.mark} usando representações com base na estrutura do seu raciocínio e no tratamento da informação.
+
+> Como os usuários criam modelos mentais? Eles usam o que já sabem do mundo. Segundo a lei de Jakob, usuários passam mais tempo em outros sites do que no seu. Por isso, esperam que seu site funcione como os outros.^[<https://www.nngroup.com/articles/mental-models/>]
+
+:::
+::: {.column}
+<center>
+![](images/mental-models.jpg){width=70%}
+</center>
+:::
+:::
+
+## Modelos mentais
 
 \
 
 Estudos e teorias cognitivas descrevem dois tipos básicos de modelos mentais: Modelo mental estrutural e Modelo mental funcional
+
+\
+
+> "Um modelo estrutural é aquele em que se assume que o usuário internalizou a estrutura de funcionamento do dispositivo ou sistema na memória, enquanto um modelo funcional assume que o usuário internalizou o conhecimento procedural sobre como usar o dispositivo ou sistema." ^[<https://www-users.york.ac.uk/~adh2/Ch2.pdf>]
 
 ## Modelo mental estrutural
 

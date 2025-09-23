@@ -82,10 +82,17 @@ table {
 
 .blue {
     color: $color-palette2;
-    font-weight: bold;
+}
+
+.blue:hover {
+    font-weight: bold; 
 }
 
 mark {
     background: #f7b36fb2 !important;
     opacity: 0.7;
+}
+
+mark:hover {
+   background: #f29a42b2 !important; 
 }
