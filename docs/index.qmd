@@ -1102,6 +1102,30 @@ WCAG versão 2.2 <https://www.w3.org/TR/2023/REC-WCAG22-20231005/> \
 Versão 2.1 em português <https://www.w3c.br/traducoes/wcag/wcag21-pt-BR/>
 :::
 
+## Nível A: Acessibilidade mínima
+
+> Por exemplo, o Critério de Sucesso 1.4.1 aborda o Uso de Cores e está incluído no critério de Nível A, estipulando que as cores não devem ser "usadas como o único meio visual de transmitir informações, indicar uma ação, induzir uma resposta ou distinguir um elemento visual".
+
+\
+
+Exemplo: Considere um site que usa preto para texto normal e distingue o texto com hiperlinks tornando-o azul (sem sublinhado). Como a cor azul é o único fator que distingue os hiperlinks do texto ao redor, esta página da web não estaria em conformidade com o Critério de Sucesso 1.4.1. Uma solução para tornar a página em conformidade com esta diretriz seria adicionar outro fator de distinção, como sublinhar todos os hiperlinks
+
+## Nível AA: Mais acessível
+
+\
+
+Exemplo: Considere uma página da web que usa azul para o texto do hiperlink. A título de exemplo, digamos que esta página da web tenha um fundo azul claro. Se o contraste entre esses dois tons de azul não for de pelo menos 4,5 para 1, a página da web não atenderá ao Critério de Sucesso 1.4.3. A página não atenderá aos requisitos WCAG Nível AA para uso de cores, pois o baixo contraste entre o texto do hiperlink e o fundo pode impedir que alguns usuários consigam lê-la.
+
+## Nível AAA: Ainda mais acessível
+
+\
+
+Exemplo: De acordo com o critério de Nível AAA, Critério de Sucesso 1.4.6, Contraste (Aprimorado), as organizações devem ir além no que diz respeito ao contraste de cores em seus sites. Este critério de sucesso eleva o contraste mínimo entre o texto principal e seu fundo para 7 para 1 (isso também abrange imagens de texto). A justificativa para essa proporção, em oposição ao requisito de Nível AA da WCAG de 4,5 para 1, é que alguns usuários com baixa visão (visão 20/80 ou inferior) precisam de tecnologia assistiva com aprimoramento de contraste para perceber diferenças de cor, mesmo com um contraste de 4,5 para 1.
+
+## A vs AA vs AAA
+
+> A decisão entre o nível WCAG AA e o nível AAA geralmente se resume ao tamanho ou tipo de organização em questão, bem como ao tipo e à finalidade do conteúdo web e seus usuários típicos. Algumas organizações e tipos de conteúdo web serão submetidos a padrões mais elevados do que outros. Por exemplo, espera-se que grandes sites governamentais para o público em geral atendam aos mais altos padrões de acessibilidade, em conformidade com o Nível AAA, especialmente em páginas que incluem informações ou funções essenciais.^[<https://www.levelaccess.com/blog/ada-compliance-levels/>]
+
 ## Avaliação de acessibilidade
 
 \
