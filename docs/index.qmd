@@ -15,7 +15,8 @@ format:
 
 html-math-method: mathjax
 code-annotations: hover
-self-contained: true
+filters: 
+  - shinylive
 ---
 
 # Conceitos de interfaces e Interação Humano-Computador
@@ -1167,3 +1168,571 @@ Ferramentas que automatizam a avaliação:
 > "O poder da Web está na sua universalidade. Acesso  para todos, independente de deficiência é um aspecto  essencial." \
 
 Tim Berners-Lee, W3C Director and  inventor of the World Wide Web
+
+
+# Revisão
+
+## Questão 1
+
+\
+
+Uma interface é uma superfície de contato que reflete as propriedades físicas das partes que interagem, as funções a serem executadas e o balanço entre poder e controle
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Uma torneira padrão é uma interface", 
+    "2": "Uma torneira com sensor de proximidade é uma interface", 
+    "3": "Alternativas a e b estão corretas",
+    "4": "Nenhuma das alternativas estão corretas, pois uma interface apenas se refere a tela de computadores"}
+ui.input_radio_buttons(
+    id = "quest01",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+correta = "3"
+
+@render.ui
+def value():
+    if input.quest01() == correta:
+      return f"Correto: {questions.get(correta)}"
+    elif input.quest01() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 2
+
+\
+
+A interface é composta por dois componentes. O (1) é aquele que deseja que uma ação seja executada e, assim, aciona a interface, que recebe a interação e responde a ela No caso o (2) é a torneira que é acionada pela ação do (1). Os componentes 1 e 2 são respectivamente
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "agente e paciente", 
+    "2": "paciente e agente", 
+    "3": "executor e agente",
+    "4": "nenhuma das anteriores"}
+ui.input_radio_buttons(
+    id = "quest02",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "1"
+
+@render.ui
+def value():
+    if input.quest02() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest02() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 3
+
+\
+
+Qual o principal motivo que explica o sucesso do ChatGPT
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Ele fala com você em diálogo, sua interface é um bate-papo de fácil acesso", 
+    "2": "Velocidade com que ele entrega a resposta ao que foi perguntado", 
+    "3": "A complexidade dos modelos utilizados na interação com o usuário",
+    "4": "Por ser uma tecnologia extremamente nova"}
+ui.input_radio_buttons(
+    id = "quest03",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "1"
+
+@render.ui
+def value():
+    if input.quest03() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest03() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 4
+
+\
+
+O principal objetivo do IHC é produzir sistemas:
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Monetizáveis, funcionais e complexos", 
+    "2": "Usáveis, seguros e funcionais", 
+    "3": "Seguros, complexos e ergonômicos",
+    "4": "Usáveis, criativos e monetizáveis"}
+ui.input_radio_buttons(
+    id = "quest04",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "2"
+
+@render.ui
+def value():
+    if input.quest04() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest04() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 5
+
+\
+
+A ergonomia deve pensar na melhor maneira do usuário se adaptar ao sistema, e que o ser humano precise se adaptar a esse algo:
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Verdadeiro", 
+    "2": "Falso"}
+ui.input_radio_buttons(
+    id = "quest05",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "2"
+
+@render.ui
+def value():
+    if input.quest05() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest05() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 7
+
+\
+
+Eu perguntando qual a temperatura atual para a Alexa, que tipo de interação foi executada?
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Linguagens de comando", 
+    "2": "Linguagem natural",
+    "3": "Manipulação direta",
+    "4": "Menus"}
+ui.input_radio_buttons(
+    id = "quest07",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "2"
+
+@render.ui
+def value():
+    if input.quest07() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest07() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 8
+
+\
+
+O comando `ls -h` é digitado no terminal de um computador Linux, que tipo de interação foi executada aqui?
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Linguagem natural", 
+    "2": "Manipulação direta",
+    "3": "Linguagem de comando",
+    "4": "Menus"}
+ui.input_radio_buttons(
+    id = "quest08",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "3"
+
+@render.ui
+def value():
+    if input.quest08() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest08() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 9
+
+\
+
+Qual a principal vantagem na utilização de Menus?
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Eles são mais bonitos", 
+    "2": "São mais rápidos de serem executados",
+    "3": "Eles são autoexplicativos",
+    "4": "Não existem vantagens"}
+ui.input_radio_buttons(
+    id = "quest09",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "3"
+
+@render.ui
+def value():
+    if input.quest09() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest09() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 10
+
+\
+
+Qual interação se mostra mais flexível para o usuário, ou seja, esta interação permite que usuários consigam desde fazer manipulação direta com o mouse a utilizar atalhos.
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Manipulação direta", 
+    "2": "Linguagem de comando",
+    "3": "Menus",
+    "4": "WIMP"}
+ui.input_radio_buttons(
+    id = "quest10",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "4"
+
+@render.ui
+def value():
+    if input.quest10() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest10() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 11
+
+\
+
+Considerando as atividades de um projeto de interação, qual a ordem das fases para a conclusão de um projeto.
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Estabelecer requisitos, Construir versões interativas, Desenvolver projetos alternativos e Avaliar o projeto", 
+    "2": "Desenvolver projetos alternativos, Construir versões interativas, Avaliar o projeto e Estabelecer requisitos",
+    "3": "Estabelecer requisitos, Desenvolver projetos alternativos, Construir versões interativas e Avaliar o projeto",
+    "4": "Desenvolver projetos alternativos, Estabelecer requisitos, Avaliar o projeto e Construir versões interativas"}
+ui.input_radio_buttons(
+    id = "quest11",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "1"
+
+@render.ui
+def value():
+    if input.quest11() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest11() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 12
+
+\
+
+Quais são as questões chave para estabelecer os requisitos de forma eficaz e centrada no usuário. Marque todas as opções que se aplicam:
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Devemos conhecer quem são os usuários-alvo", 
+    "2": "De que forma o produto interativo poderia ser útil",
+    "3": "Quais cores, sons e imagens deveriam ser aplicados",
+    "4": "Como o usuário deseja que determinada janela se comporte"}
+ui.input_checkbox_group(
+    id = "quest12",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "12"
+
+@render.ui
+def value():
+    if "".join(input.quest12()) == CORRETA:
+      return "Correto"
+    else:
+      return "Incorreto"
+```
+
+## Questão 13
+
+\
+
+Quando estamos assistindo/ouvindo uma playlist do Youtube, do lado direito fica bem claro: qual vídeo estamos assistindo; qual é próximo; quais assistimos ou não. Este recurso cumpre qual diretriz de Nielsen?
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Ajudar os usuários a reconhecer, diagnosticar e recuperar-se de erros", 
+    "2": "Flexibilidade e eficiência no uso",
+    "3": "Controle do usuário e liberdade",
+    "4": "Visibilidade e status do sistema"}
+ui.input_radio_buttons(
+    id = "quest13",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "4"
+
+@render.ui
+def value():
+    if input.quest13() == CORRETA:
+      return f"Correto: {questions.get(CORRETA)}"
+    elif input.quest13() is None:
+      return "Escolha uma alternativa"
+    else:
+      return "Incorreto"
+```
+
+## Questão 14
+
+\
+
+Marque as informações verdadeiras sobre Metáforas
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Pode ajudar na formulação de um modelo conceitual consistente para interação", 
+    "2": "Qualquer metáfora é apropriada em qualquer contexto",
+    "3": "Metáfora é uma figura de linguagem, utilizada para melhorar a expressividade de uma informação",
+    "4": "Metáforas são sempre compreendidas da mesma forma por todos"}
+ui.input_checkbox_group(
+    id = "quest14",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "13"
+
+@render.ui
+def value():
+    if "".join(input.quest14()) == CORRETA:
+      return "Correto"
+    else:
+      return "Incorreto"
+```
+
+## Questão 15
+
+\
+
+Quais são os principais pontos que a acessibilidade pretende atender ao usuário, marque todas as opções corretas:
+
+\
+
+```{shinylive-python}
+#| standalone: true
+#| components: viewer
+#| viewerHeight: 320
+from shiny.express import input, render, ui
+
+questions = {"1": "Estética", 
+    "2": "Autonomia",
+    "3": "Estímulo",
+    "4": "Segurança"}
+ui.input_checkbox_group(
+    id = "quest15",  
+    label = " ",  
+    choices = questions,  
+    selected = "",
+    width = "100%"
+   
+)  
+
+CORRETA = "24"
+
+@render.ui
+def value():
+    if "".join(input.quest15()) == CORRETA:
+      return "Correto"
+    else:
+      return "Incorreto"
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
